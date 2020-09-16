@@ -67,3 +67,8 @@ function checkAnswer (){}
 function returnResult (){}
 function keepScore () {}
 function resetQuiz (){}
+
+function main (){
+
+}
+$(main);
