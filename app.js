@@ -48,11 +48,22 @@ const store = {
 /********** TEMPLATE GENERATION FUNCTIONS **********/
 
 // These functions return HTML templates
+function generateHome (){}
+function generateQuestion (){}
+function generateTotal (){}
 
 /********** RENDER FUNCTION(S) **********/
 
 // This function conditionally replaces the contents of the <main> tag based on the state of the store
+function renderHome (){}
+function renderQuestion (){}
+function renderTotal (){}
 
 /********** EVENT HANDLER FUNCTIONS **********/
 
 // These functions handle events (submit, click, etc)
+function submitAnswer (){}
+function checkAnswer (){}
+function returnResult (){}
+function keepScore () {}
+function resetQuiz (){}
