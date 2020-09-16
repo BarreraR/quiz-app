@@ -13,9 +13,34 @@
 
 <body>
   <header>
-    <h1>The name of your quiz</h1>
+    <h1>The Vague Quiz</h1>
   </header>
-  <main></main>
+  <main>
+    <!-- This will be template for Start Screen -->
+    <div>
+      <button>Start Quiz</button>
+    </div>
+
+    <!-- This will be template for Quiz Screen -->
+    <div>
+      <div><h3>Current Score: </h3><h3>Current Question: </h3></div>
+      <form>
+        <label>Question</label>
+        <input type="button" value="Answer 1">
+        <input type="button" value="Answer 2">
+        <input type="button" value="Answer 3">
+        <input type="button" value="Answer 4">
+        <input type="button" value="Submit">
+        <input type="button" value="Next">
+      </form>
+    </div>
+
+    <!-- This will be template for Results Page -->
+    <div>
+      <h3>Final Score: </h3>
+      <input type="button" value="Restart?">
+    </div>
+  </main>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
   <script src="app.js"></script>
 </body>
