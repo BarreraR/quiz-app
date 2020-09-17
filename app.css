@@ -29,11 +29,19 @@ input {
   border-radius: 25px;
 }
 
+.answerSelected {
+  pointer-events: none;
+}
+
 .next {
   align-self: flex-end;
   margin: 10px;
   border-radius: 25px;
   padding: 10px 50px;
+}
+
+.notVisible{
+  visibility: hidden;
 }
 
 .selected {
@@ -50,7 +58,9 @@ input {
   background-color: antiquewhite;
 }
 
-
+.notClickable {
+  pointer-events: none;
+}
 
 .pBar {
   display: flex;

@@ -40,13 +40,13 @@ const store = {
         'Mar',
         'Other'
       ],
-      correctAnswer: '2019',
+      correctAnswer: 'Other',
       currentA: 0,
       // id: cuid(),
       currentQ: false
     }
   ],
-  quizStarted: false,
+  answered: false,
   questionNumber: 0,
   score: 0
 };
@@ -93,7 +93,7 @@ function handleNext() {
   $('.form').on('click', '.next', function (e) {
     e.preventDefault();
     store.questionNumber++;
-
+    store.answered = false;
     renderQuestion();
   });
 }
@@ -107,17 +107,26 @@ function handleStart() {
   });
 }
 
+function showCorrect(){
+  
+}
+
 function handleRetry() {
   $('.form').on('click', '.retry', function (e) {
     e.preventDefault();
     store.questionNumber = 0;
     store.questions.forEach(i => i.currentA = 0); // reset all answers to first option
+    store.score = 0;
+    store.answered = false;
     renderQuestion();
   });
 }
 
 function selectAnswerForAnswers(answerSelected, qId) {
   store.questions[qId].currentA = answerSelected;
+  let answerIn = store.questions[qId].answers.findIndex(i => i === store.questions[qId].correctAnswer);
+  if(answerIn  === answerSelected) store.score++;
+  
 }
 
 function getAnswerIdFromAnswers(answerId, qId) {
@@ -135,7 +144,9 @@ function handleAnswerClicked() {
     console.log('`handleAnswerClicked` ran');
     const qId = getQuestionIdFromQuestions(e.currentTarget);
     const id = getAnswerIdFromAnswers(e.currentTarget, qId);
+    // console.log('id ' + id + ' qId ' + qId);
     selectAnswerForAnswers(id, qId);
+    store.answered=true;
     renderQuestion();
   });
 }
@@ -152,11 +163,11 @@ function generateQuestionElement(question) {
     ${pBar}
     <label class="pLabel">Current Score: ${store.score}/${store.questions.length}</label>
     <label class="question" data-answer-selected="${question.currentA}">${question.question}</label>
-    <input type="button" class="answer${question.currentA === 0 ? ' selected' : ''}" value="${question.answers[0]}">
-    <input type="button" class="answer${question.currentA === 1 ? ' selected' : ''}" value="${question.answers[1]}">
-    <input type="button" class="answer${question.currentA === 2 ? ' selected' : ''}" value="${question.answers[2]}">
-    <input type="button" class="answer${question.currentA === 3 ? ' selected' : ''}" value="${question.answers[3]}">
-    <button type="submit" class="next">Next</button>
+    <input type="button" class="answer${question.currentA === 0 ? ' selected' : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[0]}">
+    <input type="button" class="answer${question.currentA === 1 ? ' selected' : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[1]}">
+    <input type="button" class="answer${question.currentA === 2 ? ' selected' : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[2]}">
+    <input type="button" class="answer${question.currentA === 3 ? ' selected' : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[3]}">
+    <button type="submit" class="next${store.answered===false?' notVisible': ''}">Next</button>
   `;
 }
 
