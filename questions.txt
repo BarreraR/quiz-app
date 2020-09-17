@@ -3,12 +3,12 @@ const store = {
     {
       question: 'What color is a fish?',
       answers: [
-        '',
-        '',
-        '',
-        ''
+        'Red',
+        'Green',
+        'Blue',
+        'Gold'
       ],
-      correctAnswer: '',
+      correctAnswer: 'Blue',
       currentA: 0,
       // id: cuid(),
       currentQ: false
@@ -16,12 +16,12 @@ const store = {
     {
       question: 'How big is a bird?',
       answers: [
-        '',
-        '',
-        '',
-        ''
+        '3 to 5 inches',
+        'Big enough',
+        '10 inches',
+        '8 feet'
       ],
-      correctAnswer: '',
+      correctAnswer: 'Big enough',
       currentA: 0,
       // id: cuid(),
       currentQ: false
@@ -29,12 +29,12 @@ const store = {
     {
       question: 'Is cereal a soup?',
       answers: [
-        '',
-        '',
-        '',
-        ''
+        'Yes, obviously',
+        "Yes, but to be specific it's a stew",
+        "It's actually a salad. Milk is a dressing",
+        'No, I like being wrong'
       ],
-      correctAnswer: '',
+      correctAnswer: 'Yes, but to be specific it's a stew',
       currentA: 0,
       // id: cuid(),
       currentQ: false
@@ -42,25 +42,25 @@ const store = {
     {
       question: 'How much milk is there in the Milky Way?',
       answers: [
-        '',
-        '',
-        '',
-        ''
+        'Technically all of it',
+        'At least 3',
+        '6.7 * 10^5 1km^3',
+        '1 Liter'
       ],
-      correctAnswer: '',
+      correctAnswer: 'Technically all of it',
       currentA: 0,
       // id: cuid(),
       currentQ: false
     },
     {
-      question: 'What tempurature is hot?',
+      question: 'What tempurature is the "hot potato"?',
       answers: [
-        '',
-        '',
-        '',
-        ''
+        '95°C',
+        'Hot',
+        '0°K',
+        '210°F'
       ],
-      correctAnswer: '',
+      correctAnswer: '210°F',
       currentA: 0,
       // id: cuid(),
       currentQ: false
@@ -68,12 +68,12 @@ const store = {
     {
       question: 'How fast is a car?',
       answers: [
-        '',
-        '',
-        '',
-        ''
+        'Faster than mine',
+        '120 mph',
+        'Fast?',
+        'Fast AND Furious'
       ],
-      correctAnswer: '',
+      correctAnswer: 'Fast AND Furious',
       currentA: 0,
       // id: cuid(),
       currentQ: false
@@ -81,12 +81,12 @@ const store = {
     {
       question: 'Is a hotdog a sandwich?',
       answers: [
-        '',
-        '',
-        '',
-        ''
+        'No, I'm to scared to face the truth',
+        'Yes, and any sandwich with a seam is, in fact, a hot dog',
+        "It's closer to a wrap",
+        'No, the buns surface is not perpindicular to the crust'
       ],
-      correctAnswer: '',
+      correctAnswer: 'Yes, and any sandwich with a seam is, in fact, a hot dog',
       currentA: 0,
       // id: cuid(),
       currentQ: false
@@ -94,12 +94,12 @@ const store = {
     {
       question: 'What kind of fruit is in Juicy Fruit?',
       answers: [
-        '',
-        '',
-        '',
-        ''
+        'Lemon, Orange, Pineapple and Banana',
+        '"Artificial flavors"',
+        'Jackfruit',
+        'Juicy'
       ],
-      correctAnswer: '',
+      correctAnswer: 'Lemon, Orange, Pineapple and Banana',
       currentA: 0,
       // id: cuid(),
       currentQ: false
@@ -107,12 +107,12 @@ const store = {
     {
       question: 'How loud is sound?',
       answers: [
-        '',
-        '',
-        '',
-        ''
+        'Loud',
+        '70 dB',
+        'Silent',
+        'Yes'
       ],
-      correctAnswer: '',
+      correctAnswer: 'Loud',
       currentA: 0,
       // id: cuid(),
       currentQ: false
@@ -120,12 +120,12 @@ const store = {
     {
       question: 'If batmans parents are dead, how was he born?',
       answers: [
-        '',
-        '',
-        '',
-        ''
+        'Magic',
+        'Alfred spawned Bruce inside a test tube who was incubated by the biggest bat Alfred could find',
+        'Robin laid an egg',
+        'Batman never had any parents because he is, secretly, just a clone of Bruce Wayne.'
       ],
-      correctAnswer: '',
+      correctAnswer: 'Robin laid an egg',
       currentA: 0,
       // id: cuid(),
       currentQ: false
@@ -133,10 +133,10 @@ const store = {
     {
       question: 'How dead is the dead sea?',
       answers: [
-        '',
-        '',
-        '',
-        ''
+        'Not dead',
+        'Pretty dead',
+        'Extremely dead',
+        "So dead it doesn't exist"
       ],
       correctAnswer: '',
       currentA: 0,
@@ -144,14 +144,14 @@ const store = {
       currentQ: false
     },
     {
-      question: 'What color is Blue from Blue’s Clues?',
+      question: "What color is Blue from Blue’s Clues?",
       answers: [
-        '',
-        '',
-        '',
-        ''
+        'Blue',
+        '#99dbff',
+        'Blue's Clues is a lie',
+        'The same color as Violet from that one scene in Willy Wonka & the Chocolate Factory'
       ],
-      correctAnswer: '',
+      correctAnswer: '#99dbff',
       currentA: 0,
       // id: cuid(),
       currentQ: false
