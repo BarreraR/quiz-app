@@ -93,7 +93,7 @@ const store = {
       question: 'What kind of fruit is in Juicy Fruit?',
       answers: [
         'Lemon, Orange, Pineapple and Banana',
-        '"Artificial flavors"',
+        'Artificial flavors',
         'Jackfruit',
         'Juicy'
       ],
@@ -143,7 +143,7 @@ const store = {
         'Blue',
         '#99dbff',
         "Blue's Clues is a lie",
-        'The same color as Violet from that one scene in Willy Wonka & the Chocolate Factory'
+        'The same color as Violet from that one scene in Willy Wonka'
       ],
       correctAnswer: '#99dbff',
       currentA: 0,
