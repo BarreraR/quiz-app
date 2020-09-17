@@ -108,7 +108,7 @@ function handleStart() {
 }
 
 function showCorrect(){
-  
+
 }
 
 function handleRetry() {
@@ -169,7 +169,8 @@ function generateQuestionElement(question) {
     <input type="button" class="answer${question.currentA === 3 ? ' selected' : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[3]}">
     <button type="submit" class="next${store.answered===false?' notVisible': ''}">Next</button>
   `;
-}
+} 
+
 
 function generateQuestionString(questionList) {
   console.log('Generate question element');
