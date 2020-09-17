@@ -20,7 +20,7 @@ const store = {
     {
       question: 'How big is a bird?',
       answers: [
-        "Birds aren't real",
+        'Birds aren\'t real',
         'Big enough',
         '10 inches',
         '8 feet'
@@ -33,11 +33,11 @@ const store = {
       question: 'Is cereal a soup?',
       answers: [
         'Yes, obviously',
-        "Yes, but to be specific it's a stew",
-        "It's actually a salad. Milk is a dressing",
+        'Yes, but to be specific it\'s a stew',
+        'It\'s actually a salad. Milk is a dressing',
         'No, I like being wrong'
       ],
-      correctAnswer: "Yes, but to be specific it's a stew",
+      correctAnswer: 'Yes, but to be specific it\'s a stew',
       currentA: -1,
       currentQ: false
     },
@@ -80,9 +80,9 @@ const store = {
     {
       question: 'Is a hotdog a sandwich?',
       answers: [
-        "No, I'm to scared to face the truth",
+        'No, I\'m to scared to face the truth',
         'Yes, and any sandwich with a seam is, in fact, a hot dog',
-        "It's closer to a wrap",
+        'It\'s closer to a wrap',
         'No, the buns surface is not perpindicular to the crust'
       ],
       correctAnswer: 'Yes, and any sandwich with a seam is, in fact, a hot dog',
@@ -131,18 +131,18 @@ const store = {
         'Not dead',
         'Pretty dead',
         'Extremely dead',
-        "So dead it doesn't exist"
+        'So dead it doesn\'t exist'
       ],
-      correctAnswer: "So dead it doesn't exist",
+      correctAnswer: 'So dead it doesn\'t exist',
       currentA: -1,
       currentQ: false
     },
     {
-      question: "What color is Blue from Blue’s Clues?",
+      question: 'What color is Blue from Blue’s Clues?',
       answers: [
         'Blue',
         '#99dbff',
-        "Blue's Clues is a lie",
+        'Blue\'s Clues is a lie',
         'The same color as Violet from that one scene in Willy Wonka'
       ],
       correctAnswer: '#99dbff',
@@ -254,7 +254,7 @@ function handleAnswerClicked() {
 function generateQuestionElement(question) {
   let pBar = '<div class="pBar">';
   for(let i = 0; i<store.questions.length; i++){
-    pBar += `<label ${i<=store.questionNumber - 1 ? 'class="selected"': ''}>${i+1} </label>`;
+    pBar += `<label ${i === store.questionNumber - 1 ? 'class="selected"': ''}>${i+1} </label>`;
   }
   pBar +='</div>';
 
@@ -263,10 +263,10 @@ function generateQuestionElement(question) {
     ${pBar}
     <label class="pLabel">Current Score: ${store.score}/${store.questions.length}</label>
     <label class="question" data-answer-selected="${question.currentA}">${question.question}</label>
-    <input type="button" class="answer${question.currentA === 0? (store.answerIndex === 0? ' selected': ' incorrect') : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[0]}">
-    <input type="button" class="answer${question.currentA === 1? (store.answerIndex === 1? ' selected': ' incorrect') : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[1]}">
-    <input type="button" class="answer${question.currentA === 2? (store.answerIndex === 2? ' selected': ' incorrect') : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[2]}">
-    <input type="button" class="answer${question.currentA === 3? (store.answerIndex === 3? ' selected': ' incorrect') : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[3]}">
+    <input type="button" class="answer${question.currentA === 0? (store.answerIndex === 0? ' selected': ' incorrect') : ''}${store.answered===true? (store.answerIndex === 0? ' selected notClickable': ' notClickable') : ''}" value="${question.answers[0]}">
+    <input type="button" class="answer${question.currentA === 1? (store.answerIndex === 1? ' selected': ' incorrect') : ''}${store.answered===true? (store.answerIndex === 1? ' selected notClickable': ' notClickable') : ''}" value="${question.answers[1]}">
+    <input type="button" class="answer${question.currentA === 2? (store.answerIndex === 2? ' selected': ' incorrect') : ''}${store.answered===true? (store.answerIndex === 2? ' selected notClickable': ' notClickable') : ''}" value="${question.answers[2]}">
+    <input type="button" class="answer${question.currentA === 3? (store.answerIndex === 3? ' selected': ' incorrect') : ''}${store.answered===true? (store.answerIndex === 3? ' selected notClickable': ' notClickable') : ''}" value="${question.answers[3]}">
     <button type="submit" class="next${store.answered===false?' notVisible': ''}">Next</button>
   `;
 } 

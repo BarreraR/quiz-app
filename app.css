@@ -10,7 +10,8 @@
 
 body {
   background-color: ivory;
-  padding: 0 5px;
+  /* padding: 0 ; */
+  margin: auto;
   text-align: center;
   max-width: 500px;
 }
@@ -19,6 +20,7 @@ body {
   background-color: white;
   display: flex;
   flex-direction: column;
+  border: dashed;
 }
 
 input {
@@ -27,10 +29,6 @@ input {
   padding: 10px;
   margin: 10px;
   border-radius: 25px;
-}
-
-.answerSelected {
-  pointer-events: none;
 }
 
 .next {
@@ -94,9 +92,13 @@ label.selected {
   padding-bottom: 5px;
 }
 
-@media all and (min-width: 350){
-  .body{
-    margin: 0 30%;
-  }
+.answer{
+  white-space: normal;
+}
 
+@media all and (min-width: 850px){
+  body {
+    margin: 0 30%;
+   
+  }
 }
