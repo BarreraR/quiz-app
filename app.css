@@ -10,7 +10,7 @@
 
 body {
   background-color: ivory;
-  padding: 0 30%;
+  padding: 0 5px;
   text-align: center;
   max-width: 500px;
 }
@@ -92,4 +92,11 @@ label.selected {
   font-weight: bold;
   margin-top: 10px;
   padding-bottom: 5px;
+}
+
+@media all and (min-width: 350){
+  .body{
+    margin: 0 30%;
+  }
+
 }
