@@ -284,7 +284,9 @@ function generateHomeString(){
 }
 
 function generateEndString(){
-  return '<button type="submit" class="retry">Try Again!</button>';
+  return `
+  <label class="pLabel">Total Score: ${store.score}/${store.questions.length}</label>
+  <button type="submit" class="retry">Try Again!</button>`;
 }
 
 function renderQuestion() {
