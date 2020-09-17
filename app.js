@@ -126,7 +126,7 @@ function getAnswerIdFromAnswers(answerId, qId) {
 }
 
 function getQuestionIdFromQuestions(qId) {
-  const question = $(qId).siblings('label').text();
+  const question = $(qId).siblings('.question').text();
   return store.questions.findIndex(q => q.question === question);
 }
 
@@ -141,14 +141,21 @@ function handleAnswerClicked() {
 }
 
 function generateQuestionElement(question) {
-  return `    
-    <p>Current Score: ${store.score}/${store.questions.length}</p>
-    <p>Current Question: ${store.questionNumber}/${store.questions.length}</p>
+  let pBar = '<div class="pBar">';
+  for(let i = 0; i<store.questions.length; i++){
+    pBar += `<label ${i<=store.questionNumber - 1 ? 'class="selected"': ''}>${i+1} </label>`;
+  }
+  pBar +='</div>';
+
+  return `  
+    <label class="pLabel">Current Question</label>
+    ${pBar}
+    <label class="pLabel">Current Score: ${store.score}/${store.questions.length}</label>
     <label class="question" data-answer-selected="${question.currentA}">${question.question}</label>
-    <input type="button" class="answer ${question.currentA === 0 ? 'selected' : ''}" value="${question.answers[0]}">
-    <input type="button" class="answer ${question.currentA === 1 ? 'selected' : ''}" value="${question.answers[1]}">
-    <input type="button" class="answer ${question.currentA === 2 ? 'selected' : ''}" value="${question.answers[2]}">
-    <input type="button" class="answer ${question.currentA === 3 ? 'selected' : ''}" value="${question.answers[3]}">
+    <input type="button" class="answer${question.currentA === 0 ? ' selected' : ''}" value="${question.answers[0]}">
+    <input type="button" class="answer${question.currentA === 1 ? ' selected' : ''}" value="${question.answers[1]}">
+    <input type="button" class="answer${question.currentA === 2 ? ' selected' : ''}" value="${question.answers[2]}">
+    <input type="button" class="answer${question.currentA === 3 ? ' selected' : ''}" value="${question.answers[3]}">
     <button type="submit" class="next">Next</button>
   `;
 }
