@@ -1,32 +1,3 @@
-What color is a fish? 
-
-How big is a bird? 
-
-How fast is a car? 
-
-How loud is sound? 
-
-What tempurature is hot? 
-
-If batmans parents are dead, how was he born?
-
-What would happen if I hired two private investigators to follow each other?
-
-What kind of fruit is in Juicy Fruit?
-
-Is a hotdog a sandwich?
-
-Is cereal a soup?
-
-How much milk is there in the Milky Way?
-
-How dead is the dead sea?
-
-What color is Blue from Blue’s Clues?
-
-What color is a green house?
-
-Will people ever walk on the sun?
 const store = {
   questions: [
     {
