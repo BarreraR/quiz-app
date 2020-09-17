@@ -8,22 +8,20 @@ const store = {
         'Blue',
         'Gold'
       ],
-      correctAnswer: 'Blue',
+      correctAnswer: 'Gold',
       currentA: 0,
-      // id: cuid(),
-      currentQ: false
+      currentQ: true
     },
     {
       question: 'How big is a bird?',
       answers: [
-        '3 to 5 inches',
+        'Birds aren't real',
         'Big enough',
         '10 inches',
         '8 feet'
       ],
       correctAnswer: 'Big enough',
       currentA: 0,
-      // id: cuid(),
       currentQ: false
     },
     {
@@ -36,7 +34,6 @@ const store = {
       ],
       correctAnswer: 'Yes, but to be specific it's a stew',
       currentA: 0,
-      // id: cuid(),
       currentQ: false
     },
     {
@@ -49,7 +46,6 @@ const store = {
       ],
       correctAnswer: 'Technically all of it',
       currentA: 0,
-      // id: cuid(),
       currentQ: false
     },
     {
@@ -62,7 +58,6 @@ const store = {
       ],
       correctAnswer: '210°F',
       currentA: 0,
-      // id: cuid(),
       currentQ: false
     },
     {
@@ -75,7 +70,6 @@ const store = {
       ],
       correctAnswer: 'Fast AND Furious',
       currentA: 0,
-      // id: cuid(),
       currentQ: false
     },
     {
@@ -88,7 +82,6 @@ const store = {
       ],
       correctAnswer: 'Yes, and any sandwich with a seam is, in fact, a hot dog',
       currentA: 0,
-      // id: cuid(),
       currentQ: false
     },
     {
@@ -101,7 +94,6 @@ const store = {
       ],
       correctAnswer: 'Lemon, Orange, Pineapple and Banana',
       currentA: 0,
-      // id: cuid(),
       currentQ: false
     },
     {
@@ -114,7 +106,6 @@ const store = {
       ],
       correctAnswer: 'Loud',
       currentA: 0,
-      // id: cuid(),
       currentQ: false
     },
     {
@@ -127,7 +118,6 @@ const store = {
       ],
       correctAnswer: 'Robin laid an egg',
       currentA: 0,
-      // id: cuid(),
       currentQ: false
     },
     {
@@ -138,9 +128,8 @@ const store = {
         'Extremely dead',
         "So dead it doesn't exist"
       ],
-      correctAnswer: '',
+      correctAnswer: 'So dead it doesn't exist',
       currentA: 0,
-      // id: cuid(),
       currentQ: false
     },
     {
@@ -153,7 +142,6 @@ const store = {
       ],
       correctAnswer: '#99dbff',
       currentA: 0,
-      // id: cuid(),
       currentQ: false
     },
   ],
