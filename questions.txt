@@ -1,31 +1,163 @@
-What color is a fish? 
-
-How big is a bird? 
-
-How fast is a car? 
-
-How loud is sound? 
-
-What tempurature is hot? 
-
-If batmans parents are dead, how was he born?
-
-What would happen if I hired two private investigators to follow each other?
-
-What kind of fruit is in Juicy Fruit?
-
-Is a hotdog a sandwich?
-
-Is cereal a soup?
-
-How much milk is there in the Milky Way?
-
-How dead is the dead sea?
-
-What color is Blue from Blue’s Clues?
-
-What color is a green house?
-
-Will people ever walk on the sun?
-
-
+const store = {
+  questions: [
+    {
+      question: 'What color is a fish?',
+      answers: [
+        '',
+        '',
+        '',
+        ''
+      ],
+      correctAnswer: '',
+      currentA: 0,
+      // id: cuid(),
+      currentQ: false
+    },
+    {
+      question: 'How big is a bird?',
+      answers: [
+        '',
+        '',
+        '',
+        ''
+      ],
+      correctAnswer: '',
+      currentA: 0,
+      // id: cuid(),
+      currentQ: false
+    },
+    {
+      question: 'Is cereal a soup?',
+      answers: [
+        '',
+        '',
+        '',
+        ''
+      ],
+      correctAnswer: '',
+      currentA: 0,
+      // id: cuid(),
+      currentQ: false
+    },
+    {
+      question: 'How much milk is there in the Milky Way?',
+      answers: [
+        '',
+        '',
+        '',
+        ''
+      ],
+      correctAnswer: '',
+      currentA: 0,
+      // id: cuid(),
+      currentQ: false
+    },
+    {
+      question: 'What tempurature is hot?',
+      answers: [
+        '',
+        '',
+        '',
+        ''
+      ],
+      correctAnswer: '',
+      currentA: 0,
+      // id: cuid(),
+      currentQ: false
+    },
+    {
+      question: 'How fast is a car?',
+      answers: [
+        '',
+        '',
+        '',
+        ''
+      ],
+      correctAnswer: '',
+      currentA: 0,
+      // id: cuid(),
+      currentQ: false
+    },
+    {
+      question: 'Is a hotdog a sandwich?',
+      answers: [
+        '',
+        '',
+        '',
+        ''
+      ],
+      correctAnswer: '',
+      currentA: 0,
+      // id: cuid(),
+      currentQ: false
+    },
+    {
+      question: 'What kind of fruit is in Juicy Fruit?',
+      answers: [
+        '',
+        '',
+        '',
+        ''
+      ],
+      correctAnswer: '',
+      currentA: 0,
+      // id: cuid(),
+      currentQ: false
+    },
+    {
+      question: 'How loud is sound?',
+      answers: [
+        '',
+        '',
+        '',
+        ''
+      ],
+      correctAnswer: '',
+      currentA: 0,
+      // id: cuid(),
+      currentQ: false
+    },
+    {
+      question: 'If batmans parents are dead, how was he born?',
+      answers: [
+        '',
+        '',
+        '',
+        ''
+      ],
+      correctAnswer: '',
+      currentA: 0,
+      // id: cuid(),
+      currentQ: false
+    },
+    {
+      question: 'How dead is the dead sea?',
+      answers: [
+        '',
+        '',
+        '',
+        ''
+      ],
+      correctAnswer: '',
+      currentA: 0,
+      // id: cuid(),
+      currentQ: false
+    },
+    {
+      question: 'What color is Blue from Blue’s Clues?',
+      answers: [
+        '',
+        '',
+        '',
+        ''
+      ],
+      correctAnswer: '',
+      currentA: 0,
+      // id: cuid(),
+      currentQ: false
+    },
+  ],
+  quizStarted: false,
+  questionNumber: 0,
+  score: 0
+};
