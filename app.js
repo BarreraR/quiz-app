@@ -163,14 +163,13 @@ function generateQuestionElement(question) {
     ${pBar}
     <label class="pLabel">Current Score: ${store.score}/${store.questions.length}</label>
     <label class="question" data-answer-selected="${question.currentA}">${question.question}</label>
-    <input type="button" class="answer${question.currentA === 0 ? ' selected' : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[0]}">
-    <input type="button" class="answer${question.currentA === 1 ? ' selected' : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[1]}">
-    <input type="button" class="answer${question.currentA === 2 ? ' selected' : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[2]}">
-    <input type="button" class="answer${question.currentA === 3 ? ' selected' : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[3]}">
+    <input type="button" class="answer${question.currentA === 0 ? ' selected' : ''}${store.answered===true?' notClickable' : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[0]}">
+    <input type="button" class="answer${question.currentA === 1 ? ' selected' : ''}${store.answered===true?' notClickable' : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[1]}">
+    <input type="button" class="answer${question.currentA === 2 ? ' selected' : ''}${store.answered===true?' notClickable' : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[2]}">
+    <input type="button" class="answer${question.currentA === 3 ? ' selected' : ''}${store.answered===true?' notClickable' : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[3]}">
     <button type="submit" class="next${store.answered===false?' notVisible': ''}">Next</button>
   `;
 } 
-
 
 function generateQuestionString(questionList) {
   console.log('Generate question element');
