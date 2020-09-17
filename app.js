@@ -14,7 +14,7 @@ const store = {
         'Gold'
       ],
       correctAnswer: 'Gold',
-      currentA: 0,
+      currentA: -1,
       currentQ: true
     },
     {
@@ -26,7 +26,7 @@ const store = {
         '8 feet'
       ],
       correctAnswer: 'Big enough',
-      currentA: 0,
+      currentA: -1,
       currentQ: false
     },
     {
@@ -38,7 +38,7 @@ const store = {
         'No, I like being wrong'
       ],
       correctAnswer: "Yes, but to be specific it's a stew",
-      currentA: 0,
+      currentA: -1,
       currentQ: false
     },
     {
@@ -50,7 +50,7 @@ const store = {
         '1 Liter'
       ],
       correctAnswer: 'Technically all of it',
-      currentA: 0,
+      currentA: -1,
       currentQ: false
     },
     {
@@ -62,7 +62,7 @@ const store = {
         '210°F'
       ],
       correctAnswer: '210°F',
-      currentA: 0,
+      currentA: -1,
       currentQ: false
     },
     {
@@ -74,7 +74,7 @@ const store = {
         'Fast AND Furious'
       ],
       correctAnswer: 'Fast AND Furious',
-      currentA: 0,
+      currentA: -1,
       currentQ: false
     },
     {
@@ -86,7 +86,7 @@ const store = {
         'No, the buns surface is not perpindicular to the crust'
       ],
       correctAnswer: 'Yes, and any sandwich with a seam is, in fact, a hot dog',
-      currentA: 0,
+      currentA: -1,
       currentQ: false
     },
     {
@@ -98,7 +98,7 @@ const store = {
         'Juicy'
       ],
       correctAnswer: 'Lemon, Orange, Pineapple and Banana',
-      currentA: 0,
+      currentA: -1,
       currentQ: false
     },
     {
@@ -110,7 +110,7 @@ const store = {
         'Yes'
       ],
       correctAnswer: 'Loud',
-      currentA: 0,
+      currentA: -1,
       currentQ: false
     },
     {
@@ -122,7 +122,7 @@ const store = {
         'Batman never had any parents because he is, secretly, just a clone of Bruce Wayne.'
       ],
       correctAnswer: 'Robin laid an egg',
-      currentA: 0,
+      currentA: -1,
       currentQ: false
     },
     {
@@ -134,7 +134,7 @@ const store = {
         "So dead it doesn't exist"
       ],
       correctAnswer: "So dead it doesn't exist",
-      currentA: 0,
+      currentA: -1,
       currentQ: false
     },
     {
@@ -146,11 +146,12 @@ const store = {
         'The same color as Violet from that one scene in Willy Wonka'
       ],
       correctAnswer: '#99dbff',
-      currentA: 0,
+      currentA: -1,
       currentQ: false
     },
   ],
   answered: false,
+  answerIndex: -1,
   questionNumber: 0,
   score: 0
 };
@@ -198,6 +199,7 @@ function handleNext() {
     e.preventDefault();
     store.questionNumber++;
     store.answered = false;
+    store.answerIndex = -1;
     renderQuestion();
   });
 }
@@ -211,15 +213,11 @@ function handleStart() {
   });
 }
 
-function showCorrect(){
-
-}
-
 function handleRetry() {
   $('.form').on('click', '.retry', function (e) {
     e.preventDefault();
     store.questionNumber = 0;
-    store.questions.forEach(i => i.currentA = 0); // reset all answers to first option
+    store.questions.forEach(i => i.currentA = -1); // reset all answers to first option
     store.score = 0;
     store.answered = false;
     renderQuestion();
@@ -228,9 +226,8 @@ function handleRetry() {
 
 function selectAnswerForAnswers(answerSelected, qId) {
   store.questions[qId].currentA = answerSelected;
-  let answerIn = store.questions[qId].answers.findIndex(i => i === store.questions[qId].correctAnswer);
-  if(answerIn  === answerSelected) store.score++;
-  
+  store.answerIndex = store.questions[qId].answers.findIndex(i => i === store.questions[qId].correctAnswer);
+  if(store.answerIndex === answerSelected) store.score++;
 }
 
 function getAnswerIdFromAnswers(answerId, qId) {
@@ -248,7 +245,6 @@ function handleAnswerClicked() {
     console.log('`handleAnswerClicked` ran');
     const qId = getQuestionIdFromQuestions(e.currentTarget);
     const id = getAnswerIdFromAnswers(e.currentTarget, qId);
-    // console.log('id ' + id + ' qId ' + qId);
     selectAnswerForAnswers(id, qId);
     store.answered=true;
     renderQuestion();
@@ -267,10 +263,10 @@ function generateQuestionElement(question) {
     ${pBar}
     <label class="pLabel">Current Score: ${store.score}/${store.questions.length}</label>
     <label class="question" data-answer-selected="${question.currentA}">${question.question}</label>
-    <input type="button" class="answer${question.currentA === 0 ? ' selected' : ''}${store.answered===true?' notClickable' : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[0]}">
-    <input type="button" class="answer${question.currentA === 1 ? ' selected' : ''}${store.answered===true?' notClickable' : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[1]}">
-    <input type="button" class="answer${question.currentA === 2 ? ' selected' : ''}${store.answered===true?' notClickable' : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[2]}">
-    <input type="button" class="answer${question.currentA === 3 ? ' selected' : ''}${store.answered===true?' notClickable' : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[3]}">
+    <input type="button" class="answer${question.currentA === 0? (store.answerIndex === 0? ' selected': ' incorrect') : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[0]}">
+    <input type="button" class="answer${question.currentA === 1? (store.answerIndex === 1? ' selected': ' incorrect') : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[1]}">
+    <input type="button" class="answer${question.currentA === 2? (store.answerIndex === 2? ' selected': ' incorrect') : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[2]}">
+    <input type="button" class="answer${question.currentA === 3? (store.answerIndex === 3? ' selected': ' incorrect') : ''}${store.answered===true?' notClickable' : ''}" value="${question.answers[3]}">
     <button type="submit" class="next${store.answered===false?' notVisible': ''}">Next</button>
   `;
 } 

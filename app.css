@@ -45,7 +45,11 @@ input {
 }
 
 .selected {
-  background-color: orange;
+  background-color: green;
+}
+
+.incorrect {
+  background-color: red;
 }
 
 .start, .retry {
@@ -80,6 +84,7 @@ input {
 
 label.selected {
   color: black;
+  background-color: orange;
 }
 
 .pLabel {
