@@ -20,7 +20,7 @@ const store = {
     {
       question: 'How big is a bird?',
       answers: [
-        'Birds aren't real',
+        "Birds aren't real",
         'Big enough',
         '10 inches',
         '8 feet'
@@ -37,7 +37,7 @@ const store = {
         "It's actually a salad. Milk is a dressing",
         'No, I like being wrong'
       ],
-      correctAnswer: 'Yes, but to be specific it's a stew',
+      correctAnswer: "Yes, but to be specific it's a stew",
       currentA: 0,
       currentQ: false
     },
@@ -80,7 +80,7 @@ const store = {
     {
       question: 'Is a hotdog a sandwich?',
       answers: [
-        'No, I'm to scared to face the truth',
+        "No, I'm to scared to face the truth",
         'Yes, and any sandwich with a seam is, in fact, a hot dog',
         "It's closer to a wrap",
         'No, the buns surface is not perpindicular to the crust'
@@ -133,7 +133,7 @@ const store = {
         'Extremely dead',
         "So dead it doesn't exist"
       ],
-      correctAnswer: 'So dead it doesn't exist',
+      correctAnswer: "So dead it doesn't exist",
       currentA: 0,
       currentQ: false
     },
@@ -142,7 +142,7 @@ const store = {
       answers: [
         'Blue',
         '#99dbff',
-        'Blue's Clues is a lie',
+        "Blue's Clues is a lie",
         'The same color as Violet from that one scene in Willy Wonka & the Chocolate Factory'
       ],
       correctAnswer: '#99dbff',
@@ -150,7 +150,7 @@ const store = {
       currentQ: false
     },
   ],
-  quizStarted: false,
+  answered: false,
   questionNumber: 0,
   score: 0
 };
