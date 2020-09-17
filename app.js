@@ -4,47 +4,151 @@
  * Example store structure
  */
 const store = {
-  // 5 or more questions are required
   questions: [
     {
-      question: 'What color is broccoli?',
+      question: 'What color is a fish?',
       answers: [
-        'red',
-        'orange',
-        'pink',
-        'green'
+        'Red',
+        'Green',
+        'Blue',
+        'Gold'
       ],
-      correctAnswer: 'green',
+      correctAnswer: 'Gold',
       currentA: 0,
-      // id: cuid(),
       currentQ: true
     },
     {
-      question: 'What is the current year?',
+      question: 'How big is a bird?',
       answers: [
-        '1970',
-        '2015',
-        '2019',
-        '2005'
+        'Birds aren't real',
+        'Big enough',
+        '10 inches',
+        '8 feet'
       ],
-      correctAnswer: '2019',
+      correctAnswer: 'Big enough',
       currentA: 0,
-      // id: cuid(),
       currentQ: false
     },
     {
-      question: 'What is the current month?',
+      question: 'Is cereal a soup?',
       answers: [
-        'Jan',
-        'Feb',
-        'Mar',
-        'Other'
+        'Yes, obviously',
+        "Yes, but to be specific it's a stew",
+        "It's actually a salad. Milk is a dressing",
+        'No, I like being wrong'
       ],
-      correctAnswer: '2019',
+      correctAnswer: 'Yes, but to be specific it's a stew',
       currentA: 0,
-      // id: cuid(),
       currentQ: false
-    }
+    },
+    {
+      question: 'How much milk is there in the Milky Way?',
+      answers: [
+        'Technically all of it',
+        'At least 3',
+        '6.7 * 10^5 1km^3',
+        '1 Liter'
+      ],
+      correctAnswer: 'Technically all of it',
+      currentA: 0,
+      currentQ: false
+    },
+    {
+      question: 'What tempurature is the "hot potato"?',
+      answers: [
+        '95°C',
+        'Hot',
+        '0°K',
+        '210°F'
+      ],
+      correctAnswer: '210°F',
+      currentA: 0,
+      currentQ: false
+    },
+    {
+      question: 'How fast is a car?',
+      answers: [
+        'Faster than mine',
+        '120 mph',
+        'Fast?',
+        'Fast AND Furious'
+      ],
+      correctAnswer: 'Fast AND Furious',
+      currentA: 0,
+      currentQ: false
+    },
+    {
+      question: 'Is a hotdog a sandwich?',
+      answers: [
+        'No, I'm to scared to face the truth',
+        'Yes, and any sandwich with a seam is, in fact, a hot dog',
+        "It's closer to a wrap",
+        'No, the buns surface is not perpindicular to the crust'
+      ],
+      correctAnswer: 'Yes, and any sandwich with a seam is, in fact, a hot dog',
+      currentA: 0,
+      currentQ: false
+    },
+    {
+      question: 'What kind of fruit is in Juicy Fruit?',
+      answers: [
+        'Lemon, Orange, Pineapple and Banana',
+        '"Artificial flavors"',
+        'Jackfruit',
+        'Juicy'
+      ],
+      correctAnswer: 'Lemon, Orange, Pineapple and Banana',
+      currentA: 0,
+      currentQ: false
+    },
+    {
+      question: 'How loud is sound?',
+      answers: [
+        'Loud',
+        '70 dB',
+        'Silent',
+        'Yes'
+      ],
+      correctAnswer: 'Loud',
+      currentA: 0,
+      currentQ: false
+    },
+    {
+      question: 'If batmans parents are dead, how was he born?',
+      answers: [
+        'Magic',
+        'Alfred spawned Bruce inside a test tube who was incubated by the biggest bat Alfred could find',
+        'Robin laid an egg',
+        'Batman never had any parents because he is, secretly, just a clone of Bruce Wayne.'
+      ],
+      correctAnswer: 'Robin laid an egg',
+      currentA: 0,
+      currentQ: false
+    },
+    {
+      question: 'How dead is the dead sea?',
+      answers: [
+        'Not dead',
+        'Pretty dead',
+        'Extremely dead',
+        "So dead it doesn't exist"
+      ],
+      correctAnswer: 'So dead it doesn't exist',
+      currentA: 0,
+      currentQ: false
+    },
+    {
+      question: "What color is Blue from Blue’s Clues?",
+      answers: [
+        'Blue',
+        '#99dbff',
+        'Blue's Clues is a lie',
+        'The same color as Violet from that one scene in Willy Wonka & the Chocolate Factory'
+      ],
+      correctAnswer: '#99dbff',
+      currentA: 0,
+      currentQ: false
+    },
   ],
   quizStarted: false,
   questionNumber: 0,
