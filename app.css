@@ -6,3 +6,45 @@
   * https://github.com/andreacardybailey/responsive_example/blob/master/styles/responsive-base.css 
   *
 */
+
+
+body {
+  background-color: ivory;
+  padding: 0 30%;
+  text-align: center;
+  max-width: 500px;
+}
+
+.form {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  font-weight: 700;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 10px;
+  margin: 10px;
+}
+
+.next {
+  align-self: flex-end;
+  margin: 10px;
+  border-radius: 25px;
+  padding: 10px 50px;
+}
+
+.selected {
+  background-color: orange;
+}
+
+.start, .retry {
+  font-size: larger;
+  align-self: center;
+  padding: 50px;
+  margin: 100px;
+  border-radius: 20px;
+  border-width: 10px;
+  background-color: antiquewhite;
+}
