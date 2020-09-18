@@ -118,7 +118,6 @@ label.selected {
 
 @media all and (min-width: 850px){
   body {
-    margin: 0 30%;
-   
+    /* margin: 0 30%; */
   }
 }
