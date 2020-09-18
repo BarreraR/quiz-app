@@ -80,10 +80,6 @@ input {
   border-width: 1px;
 }
 
-.notClickable {
-  pointer-events: none;
-}
-
 .pBar {
   display: flex;
   flex-direction: row;

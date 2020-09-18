@@ -248,6 +248,7 @@ function handleAnswerClicked() {
     selectAnswerForAnswers(id, qId);
     store.answered=true;
     renderQuestion();
+    $('.answer').prop('disabled', true);
   });
 }
 
@@ -285,7 +286,7 @@ function generateHomeString(){
 
 function generateEndString(){
   return `
-  <label class="pLabel">Total Score: ${store.score}/${store.questions.length}</label>
+  <label class="pLabel totalScore">Total Score: ${store.score}/${store.questions.length}</label>
   <button type="submit" class="retry">Try Again!</button>`;
 }
 
